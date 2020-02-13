@@ -13,13 +13,25 @@ Viewport的設定 用戶手指放大縮小無效
 ```
 
 [reset.css](https://meyerweb.com/eric/tools/css/reset/) 重置基本樣式表
-移动端1像素边框问题
-border.css 解決移動端[1像素邊框問題](https://www.jianshu.com/p/fa670b737a29)
-[FastClick](https://www.npmjs.com/package/fastclick) is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap
-[Iconfont](https://www.iconfont.cn/)-阿里巴巴矢量图标库
+移动端1像素边框问题  
+border.css 解決移動端[1像素邊框問題](https://www.jianshu.com/p/fa670b737a29)  
+[FastClick](https://www.npmjs.com/package/fastclick) is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap  
+[Iconfont](https://www.iconfont.cn/)-阿里巴巴矢量图标库  
 
 [vue项目笔记（4）-常用的基础样式（reset.css与border.css）](https://blog.csdn.net/qq_41115965/article/details/81542910)
 
+### CSS
+
+reset.css
+
+```html
+html {overflow-x: hidden;height: 100%;font-size: 50px;
+```
+
+1 rem = html font-size = 50px
+43px / 50px = 86px / 100px = .86 rem  `line-height: .86rem`
+
+[REM](https://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem/)
 
 ## Project setup
 ```
