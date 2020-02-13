@@ -32,6 +32,7 @@ html {overflow-x: hidden;height: 100%;font-size: 50px;
 43px / 50px = 86px / 100px = .86 rem  `line-height: .86rem`
 
 [REM](https://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem/)
+20px  = 50 * 0.4 = .4rem
 
 ## Project setup
 ```
