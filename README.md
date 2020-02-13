@@ -4,6 +4,23 @@
 
 `vue create vue-web-app`
 
+## mobile setting
+
+Viewport的設定 用戶手指放大縮小無效
+
+```html
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+```
+
+[reset.css](https://meyerweb.com/eric/tools/css/reset/) 重置基本樣式表
+移动端1像素边框问题
+border.css 解決移動端[1像素邊框問題](https://www.jianshu.com/p/fa670b737a29)
+[FastClick](https://www.npmjs.com/package/fastclick) is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap
+[Iconfont](https://www.iconfont.cn/)-阿里巴巴矢量图标库
+
+[vue项目笔记（4）-常用的基础样式（reset.css与border.css）](https://blog.csdn.net/qq_41115965/article/details/81542910)
+
+
 ## Project setup
 ```
 yarn install
