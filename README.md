@@ -34,6 +34,11 @@ html {overflow-x: hidden;height: 100%;font-size: 50px;
 [REM](https://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem/)
 20px  = 50 * 0.4 = .4rem
 
+## Tools
+
+[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
+`yarn add vue-awesome-swiper@2.6.7 `
+
 ## Project setup
 ```
 yarn install
