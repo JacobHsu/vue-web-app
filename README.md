@@ -37,7 +37,8 @@ html {overflow-x: hidden;height: 100%;font-size: 50px;
 ## Tools
 
 [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
-`yarn add vue-awesome-swiper@2.6.7 `
+`yarn add vue-awesome-swiper@2.6.7 `  
+[Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)  
 
 ## Project setup
 ```
