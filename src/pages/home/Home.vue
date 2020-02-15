@@ -3,6 +3,7 @@
     <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
+    <home-recommend :list="recommendList"></home-recommend>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
+import HomeRecommend from './components/Recommend'
 
 export default {
   name: 'Home',
@@ -18,6 +20,7 @@ export default {
     HomeHeader,
     HomeSwiper,
     HomeIcons,
+    HomeRecommend,
   },
   data () {
     return {
@@ -68,6 +71,17 @@ export default {
         id: '0010',
         imgUrl: 'https://picbed.qunarzz.com/ae617a31e0bd5803d76918b817f6d942.png',
         desc: '自由行'
+      }],
+      recommendList: [{
+        id: '0001',
+        imgUrl: '//imgs.qunarzz.com/vs_ceph_vs_tts/3cbe255c-539b-4958-b0bc-a2c2e2ba4444.jpg_r_390x260x90_5ab5ba96.jpg',
+        title: '北京-九寨沟 5天跟团游',
+        desc: '飞机往返|早中班可选|超值特卖|0自费一价全包！九寨沟黄龙/牟尼沟双飞五日游'
+      },{
+        id: '0002',
+        imgUrl: '//imgs.qunarzz.com/vs_ceph_vs_tts/e9842e5d-c259-4711-8439-724d032e66ea.jpg_r_480x320x90_2ab8f532.jpg',
+        title: '北京-东京 5天跟团游',
+        desc: '💎欢乐畅想💎日本东京半自助5日游💎东京+横滨+富士山+镰仓+江之岛神社'
       }],
     }
   },
