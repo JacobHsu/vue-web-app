@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <!--v-if 等真正數據進來才創建-->
     <swiper :options="swiperOption" v-if="showSwiper">
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
