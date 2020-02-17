@@ -34,6 +34,12 @@ html {overflow-x: hidden;height: 100%;font-size: 50px;
 [REM](https://www.hexschool.com/2016/01/02/2016-08-08-em-vs-rem/)
 20px  = 50 * 0.4 = .4rem
 
+### api
+
+Vue CLI 2  模擬數據會放在`static/mock/index.json`  
+Vue CLI 3  模擬數據會放在`public/mock/index.json`  
+手動新建vue.config.js文件[配置](https://kknews.cc/zh-tw/code/2kkp33g.html)
+
 ## Tools
 
 [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
