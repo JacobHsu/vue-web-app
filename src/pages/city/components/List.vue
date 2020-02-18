@@ -1,6 +1,6 @@
 <template>
   <div class="list" ref="wrapper">
-    <div>
+    <div> <!-- div https://github.com/ustbhuangyi/better-scroll -->
       <div class="area">
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
@@ -46,7 +46,7 @@
 
 <script>
 
-
+import Bscroll from 'better-scroll'
 export default {
   name: 'CityList',
   props: {
@@ -54,6 +54,9 @@ export default {
     cities: Object,
     letter: String
   },
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  }
 }
 </script>
 

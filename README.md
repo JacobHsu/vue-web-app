@@ -45,6 +45,7 @@ Vue CLI 3  模擬數據會放在`public/mock/index.json`
 [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
 `yarn add vue-awesome-swiper@2.6.7 `  
 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)  
+[better-scroll](https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/installation.html)
 
 ## Project setup
 ```
