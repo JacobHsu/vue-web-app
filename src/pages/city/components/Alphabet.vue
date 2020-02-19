@@ -27,7 +27,7 @@ export default {
       for (let i in this.cities) {
         letters.push(i)
       }
-      return letters
+      return letters // ['A','B','C'..]
     }
   },
   data () {
@@ -38,11 +38,11 @@ export default {
     }
   },
   updated () {
-    this.startY = this.$refs['A'][0].offsetTop
+    this.startY = this.$refs['A'][0].offsetTop //獲得A頂部高度
   },
   methods: {
     handleLetterClick (e) {
-      this.$emit('change', e.target.innerText)
+      this.$emit('change', e.target.innerText) //City.vue EventListener @change
     },
     handleTouchStart () {
       this.touchStatus = true
@@ -52,13 +52,14 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
+        // 獲得A頂部高度 滑動看手指距頂部高度 算出手指與A差值 再除以每個字母高度 得當前字母
         this.timer = setTimeout(() => {
-          const touchY = e.touches[0].clientY - 79
-          const index = Math.floor((touchY - this.startY) / 20)
+          const touchY = e.touches[0].clientY - 79 // 滑動看手指距頂部高度 79(43+36)
+          const index = Math.floor((touchY - this.startY) / 20) //每個字母高度 20
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
-        }, 16)
+        }, 16) //時間間格 延遲16毫秒 函數節流
       }
     },
     handleTouchEnd () {
