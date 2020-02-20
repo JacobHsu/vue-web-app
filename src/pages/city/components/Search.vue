@@ -26,7 +26,7 @@
 </template>
 
 <script>
-
+import Bscroll from 'better-scroll'
 export default {
   name: 'CitySearch',
   props: {
@@ -38,6 +38,39 @@ export default {
       list: [],
       timer: null
     }
+  },
+  computed: {
+    // 邏輯不放模板 v-show="!list.length"
+    hasNoData () {
+      return !this.list.length
+    }
+  },
+  watch: {
+    keyword () {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      if (!this.keyword) {
+        this.list = []
+        return
+      }
+      this.timer = setTimeout(() => {
+        const result = []
+        for (let i in this.cities) {
+          this.cities[i].forEach((value) => {
+            // 搜尋到添加到關鍵詞結果結果中 再給至 list
+            if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
+              result.push(value)
+            }
+          })
+        }
+        this.list = result
+      }, 100)
+    }
+  },
+  mounted () {
+    // 搜尋結果過多 提供滾動
+    this.scroll = new Bscroll(this.$refs.search)
   }
 }
 </script>

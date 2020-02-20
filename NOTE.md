@@ -55,3 +55,28 @@ export default {
         :ref="key"
     >
 ```
+
+## City Search
+
+pages\city\components\Search.vue
+
+```js
+ <input v-model="keyword" class="search-input" type="text"
+   data () {
+    return {
+      keyword: '',
+
+  props: {
+    cities: Object
+  },
+
+  watch: {
+    keyword () {
+       for (let i in this.cities) {
+```
+
+src\pages\city\City.vue
+
+```js
+<city-search :cities="cities"></city-search>
+```
