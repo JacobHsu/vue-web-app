@@ -47,6 +47,10 @@ Vue CLI 3  模擬數據會放在`public/mock/index.json`
 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)  
 [better-scroll](https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/installation.html)
 
+## Docs
+
+vuejs.org > Ecosystem > Core Libraries > [Vuex](https://vuex.vuejs.org/zh/)
+
 ## Project setup
 ```
 yarn install

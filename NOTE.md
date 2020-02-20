@@ -80,3 +80,77 @@ src\pages\city\City.vue
 ```js
 <city-search :cities="cities"></city-search>
 ```
+
+## vuex
+
+src\store\state.js
+
+```js
+let defaultCity = '上海'
+export default {
+  city: defaultCity
+}
+```
+
+src\store\mutations.js
+
+```js
+ changeCity (state, city) {
+    state.city = city
+```
+
+pages\home\components\Header.vue
+
+```js
+import { mapState } from 'vuex'
+export default {
+  name: 'HomeHeader',
+  computed: {
+    ...mapState(['city']) //{{this.$store.state.city}} -> {{this.city}}
+  }
+}
+
+<router-link to='/city'>
+  <div class="header-right">
+    {{this.city}}
+```
+
+pages\city\components\List.vue
+
+```js
+import { mapState, mapMutations } from 'vuex'
+  computed: {
+    ...mapState({
+      currentCity: 'city' // {{this.$store.state.city}} -> {{this.currentCity}}
+    })
+  },
+   methods: {
+    handleCityClick (city) {
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
+  },
+
+  <div class="title border-topbottom">当前城市</div>
+  <div class="button">{{this.currentCity}}</div>
+
+  <div class="title border-topbottom">热门城市</div>
+  @click="handleCityClick(item.name)"
+```
+
+pages\city\components\Search.vue
+
+```js
+import { mapMutations } from 'vuex'
+  methods: {
+    handleCityClick (city) {
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
+  },
+
+ v-for="item of list"
+   @click="handleCityClick(item.name)"
+```
