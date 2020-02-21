@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!--失活的組件將會被緩存-->
+    <keep-alive exclude="Detail">
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
