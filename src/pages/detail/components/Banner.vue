@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">
+    <div class="banner" @click="handleBannerClick">
       <img class="banner-img" :src="bannerImg" />
       <div class="banner-info">
         <div class="banner-tittle">
@@ -13,16 +13,39 @@
       </div>
     </div>
 
+      <common-gallary
+        :imgs="bannerImgs"
+        v-show="showGallary"
+        @close="handleGallaryClose"
+      ></common-gallary>
+
   </div>
 </template>
 
 <script>
+import CommonGallary from '@/common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
   props: {
     sightName: String,
     bannerImg: String,
     bannerImgs: Array
+  },
+  components: {
+    CommonGallary
+  },
+  data () {
+    return {
+      showGallary: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
   }
 }
 </script>

@@ -46,6 +46,7 @@ Vue CLI 3  模擬數據會放在`public/mock/index.json`
 `yarn add vue-awesome-swiper@2.6.7 `  
 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)  
 [better-scroll](https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/installation.html)
+[Swiper3|Swiper中文网](https://3.swiper.com.cn/) API 文档 > Pagination（分页器）
 
 ## Docs
 
