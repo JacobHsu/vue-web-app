@@ -47,10 +47,12 @@ Vue CLI 3  模擬數據會放在`public/mock/index.json`
 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)  
 [better-scroll](https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/installation.html)
 [Swiper3|Swiper中文网](https://3.swiper.com.cn/) API 文档 > Pagination（分页器）
+[babel-polyfill](https://babeljs.io/docs/en/6.26.3/babel-polyfill) 解決手機瀏覽器不支持promise造成白屏問題 幫添加es6特性
 
 ## Docs
 
 vuejs.org > Ecosystem > Core Libraries > [Vuex](https://vuex.vuejs.org/zh/)
+
 
 ## Project setup
 ```

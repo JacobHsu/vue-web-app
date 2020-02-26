@@ -154,3 +154,12 @@ import { mapMutations } from 'vuex'
  v-for="item of list"
    @click="handleCityClick(item.name)"
 ```
+
+## 事件修飾符
+
+src\pages\city\components\Alphabet.vue
+
+.prevent 阻止 touchstart 默認行為 防滾動ABC時 畫面跟著上下滾動
+```js
+ @touchstart.prevent="handleTouchStart"
+```
