@@ -163,3 +163,30 @@ src\pages\city\components\Alphabet.vue
 ```js
  @touchstart.prevent="handleTouchStart"
 ```
+
+## localStorage
+
+src\store\state.js
+
+```js
+let defaultCity = '上海'
+// localStorage  用 try catch 包裹 避免隱身瀏覽器拋出異常
+try {
+  if (localStorage.city) {
+    defaultCity = localStorage.city // 記住選擇
+  }
+} catch (e) {}
+
+export default {
+  city: defaultCity
+}
+```
+
+## bug
+
+[dynamic import() Syntax makes webpack throw an error #3335](https://github.com/vuejs/vue-cli/issues/3335)
+
+[Gradient has outdated direction syntax. New syntax is like "to left" instead of "right". #530](https://github.com/postcss/autoprefixer/issues/530)
+`background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))`  
+`background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))`
+

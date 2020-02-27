@@ -70,7 +70,7 @@ vue.config.js
 
 ```js
 module.exports = {
-    publicPath: 'vue-web-app',
+    publicPath: process.env.NODE_ENV === 'production' ? './vue-web-app' : '/',
 }
 ```
 
