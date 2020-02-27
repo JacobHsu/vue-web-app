@@ -11,7 +11,9 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home //() => import('@/pages/home/Home')  
+    //Home 異步組件按需加載 只載對應的js等資源 但訪問下一個頁面時 會重發請求 建議app.js小時不用拆分
+    // api請求的代價 比 首頁多加載js 要高 (app.js 超過1MB 再拆分)
   },
   {
     path: '/city',

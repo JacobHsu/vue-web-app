@@ -53,6 +53,26 @@ Vue CLI 3  模擬數據會放在`public/mock/index.json`
 
 vuejs.org > Ecosystem > Core Libraries > [Vuex](https://vuex.vuejs.org/zh/)
 
+## Deploy
+
+`$ yarn add gh-pages`
+
+package.json
+
+```js
+"homepage": "https://jacobhsu.github.io/vue-web-app/",
+  "scripts": {
+    "deploy": "yarn build && gh-pages -d dist"
+  },
+```
+
+vue.config.js
+
+```js
+module.exports = {
+    publicPath: 'vue-web-app',
+}
+```
 
 ## Project setup
 ```
