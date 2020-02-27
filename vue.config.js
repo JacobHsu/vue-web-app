@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production' ? './vue-web-app' : '/',
+    publicPath: process.env.NODE_ENV === 'production' ? 'vue-web-app' : '/',
     devServer: {
      open: true,
      host: 'localhost',  // 設置主機地址
