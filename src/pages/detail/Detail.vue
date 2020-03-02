@@ -35,7 +35,8 @@ export default {
   },
   methods: {
     getDetailInfo () {
-      axios.get('/api/detail.json', {
+      const api = process.env.NODE_ENV === 'production' ? '/vue-web-app/mock/detail.json' : '/api/detail.json';
+      axios.get(api, {
         params: {
           id: this.$route.params.id
         }

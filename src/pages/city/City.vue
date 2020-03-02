@@ -37,7 +37,8 @@ export default {
   },
   methods: {
     getCityInfo () {
-      axios.get('/api/city.json')
+      const api = process.env.NODE_ENV === 'production' ? '/vue-web-app/mock/detail.json' : '/api/city.json';
+      axios.get(api)
         .then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc (res) {

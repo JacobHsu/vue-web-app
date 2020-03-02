@@ -42,7 +42,8 @@ export default {
   methods: {
     getHomeInfo () {
       // static/mock/index.json
-      axios.get('/api/index.json?city='+ this.city)
+      const api = process.env.NODE_ENV === 'production' ? '/vue-web-app/mock/index.json' : '/api/index.json';
+      axios.get(api+'?city='+ this.city)
         .then(this.getHomeInfoSucc)
     },
      getHomeInfoSucc (res) {

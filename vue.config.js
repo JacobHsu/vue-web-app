@@ -1,4 +1,9 @@
 
+// production: dist/mock/ 
+// https://jacobhsu.github.io/vue-web-app/mock/detail.json
+// https://jacobhsu.github.io/vue-web-app/mock/city.json
+// https://jacobhsu.github.io/vue-web-app/mock/detail.json
+
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/vue-web-app' : '/',
     // public/mock
